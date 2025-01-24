@@ -4,6 +4,12 @@ format: html
 ---
 
 ## Data Load
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(here)
+
+```
 
 ```{r}
 #import data from this website
@@ -17,9 +23,20 @@ wine_quality <- readr::read_delim("https://archive.ics.uci.edu/ml/machine-learni
 
 Examine the data to come up with an interesting research question based on the wine data. It is a large collection of wine attributes and quality ratings to indicate the sommlier's rating of the wine.
 
-## Explore the data
+change quality into binary data and fit different parameters to a logistic model 
 
+## Explore the data
 Create some exploratory tables or charts to help you better understand possible relationships
+
+
+```{r}
+head(wine_quality)
+
+wine_df -> wine_quality %>% 
+  select(pH, density) %>% 
+  
+  
+```
 
 ## Use a Tidymodel framework to conduct your analysis.
 
